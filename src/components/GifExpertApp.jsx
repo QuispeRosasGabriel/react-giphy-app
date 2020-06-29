@@ -14,7 +14,7 @@ const GifExpertApp = () => {
     <>
       <div>React Giph App</div>
       <br />
-      <AddCategory></AddCategory>
+      <AddCategory setCategories={setCategories}></AddCategory>
       <hr />
       <ul>
         {categories.map((categoria, idx) => (
