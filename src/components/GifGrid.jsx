@@ -10,7 +10,9 @@ const GifGrid = ({ categoria, idx }) => {
 
   const getGifs = async () => {
     const key = "ASms80zfjCgo4lNx3YI3YqIUwlrfM5pt";
-    const url = `https://api.giphy.com/v1/gifs/search?q=Naruto&limit=10&api_key=${key}`;
+    const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(
+      categoria
+    )}&limit=10&api_key=${key}`;
     const resp = await fetch(url);
     const { data } = await resp.json();
 
