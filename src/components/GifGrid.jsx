@@ -26,12 +26,14 @@ const GifGrid = ({ categoria, idx }) => {
   };
 
   return (
-    <div>
+    <>
       <h3>{categoria}</h3>
-      {images.map((img) => (
-        <GifGridItem {...img} key={img.id}></GifGridItem>
-      ))}
-    </div>
+      <div className="card-grid">
+        {images.map((img) => (
+          <GifGridItem {...img} key={img.id}></GifGridItem>
+        ))}
+      </div>
+    </>
   );
 };
 
