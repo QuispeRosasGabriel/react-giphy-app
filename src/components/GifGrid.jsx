@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+import GifGridItem from "./GifGridItem";
 
 const GifGrid = ({ categoria, idx }) => {
+  const [images, setImages] = useState([]);
+
   useEffect(() => {
     getGifs();
   }, []);
@@ -18,11 +21,16 @@ const GifGrid = ({ categoria, idx }) => {
         url: img.images?.downsized_medium.url,
       };
     });
+
+    setImages(gifs);
   };
 
   return (
     <div>
       <h3>{categoria}</h3>
+      {images.map((img) => (
+        <GifGridItem {...img} key={img.id}></GifGridItem>
+      ))}
     </div>
   );
 };
