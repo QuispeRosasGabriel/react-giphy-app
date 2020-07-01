@@ -7,7 +7,7 @@ const GifGrid = ({ categoria, idx }) => {
 
   useEffect(() => {
     getGifs(categoria).then((resp) => setImages(resp));
-  }, []);
+  }, [categoria]);
 
   return (
     <>
