@@ -3,11 +3,7 @@ import AddCategory from "./AddCategory";
 import GifGrid from "./GifGrid";
 
 const GifExpertApp = () => {
-  const [categories, setCategories] = useState([["One Puch"]]);
-
-  //   const handleAddCategory = () => {
-  //     setCategories([...categories, "Naruto"]);
-  //   };
+  const [categories, setCategories] = useState([[""]]);
 
   return (
     <>
